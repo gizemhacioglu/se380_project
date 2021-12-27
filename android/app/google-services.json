@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "332530778820",
+    "project_id": "se380project-89360",
+    "storage_bucket": "se380project-89360.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332530778820:android:c16c44fbeb2fe71c1c7f91",
+        "android_client_info": {
+          "package_name": "com.example.se380_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332530778820-qa081cigkb5mtdrvostcga9k3i63p0d0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcB3VmATo6o-tw8RSxYSi9j7oXgoJ30rA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332530778820-qa081cigkb5mtdrvostcga9k3i63p0d0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,16 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:se380_project/widgets/auth_form.dart';
+import 'package:se380_project/screens/authentication_screen.dart';
 
-class AuthenticationScreen extends StatefulWidget {
-  const AuthenticationScreen({Key? key}) : super(key: key);
+void main() => runApp(MyApp());
 
-  @override
-  _AuthenticationScreenState createState() => _AuthenticationScreenState();
-}
-
-class _AuthenticationScreenState extends State<AuthenticationScreen> {
-  @override
+class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
-    return Scaffold();
+    return MaterialApp(
+      title: "Application Name",
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: AuthenticationScreen(),
+    );
   }
 }
