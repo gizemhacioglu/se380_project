@@ -17,11 +17,11 @@ class MyApp extends StatelessWidget {
       title: "Application Name",
       theme: ThemeData(
         primarySwatch: Colors.purple,
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.pink,
         accentColor: Colors.pink,
         accentColorBrightness: Brightness.dark,
         buttonTheme: ButtonTheme.of(context).copyWith(
-          buttonColor: Colors.purple,
+          buttonColor: Colors.pink,
           textTheme: ButtonTextTheme.primary,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
