@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.pink,
         accentColorBrightness: Brightness.dark,
         buttonTheme: ButtonTheme.of(context).copyWith(
-          buttonColor: Colors.pink,
+          buttonColor: Colors.blue,
           textTheme: ButtonTextTheme.primary,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
