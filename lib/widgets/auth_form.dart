@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthenticationForm extends StatefulWidget {
-  const AuthenticationForm({Key? key}) : super(key: key);
+  AuthenticationForm(this.submitFn);
+
+  final void Function(String email, String username, String password,
+      bool isLogin, BuildContext ctx) submitFn;
 
   @override
   _AuthenticationFormState createState() => _AuthenticationFormState();
@@ -16,9 +20,17 @@ class _AuthenticationFormState extends State<AuthenticationForm> {
 
   void _trySubmit() {
     final isValid = _formKey.currentState!.validate();
+    FocusScope.of(context).unfocus();
 
     if (isValid) {
       _formKey.currentState!.save();
+      widget.submitFn(
+        _userEmail.trim(),
+        _userName.trim(),
+        _userPassword.trim(),
+        _isLogin,
+        context,
+      );
     }
   }
 
