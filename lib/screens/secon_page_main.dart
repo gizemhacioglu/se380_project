@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:se380_project/profile/profile_screen.dart';
 import './second_page.dart';
 
 void main() => runApp(DietApp());
@@ -10,7 +11,18 @@ class DietApp extends StatelessWidget {
   }
 }
 
-class MyHome extends StatelessWidget {
+class MyHome extends StatefulWidget {
+  @override
+  State<MyHome> createState() => _MyHomeState();
+}
+
+class _MyHomeState extends State<MyHome> {
+  int currentIndex = 0;
+  final screens =[
+    DietApp(),
+    ProfileScreen(),
+  ];
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -24,6 +36,13 @@ class MyHome extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const SecondPage()));
             },
           ),
+          IconButton(
+          icon: Icon(Icons.person),
+          onPressed: () {
+          Navigator.push(context,
+          MaterialPageRoute(builder: (context) => ProfileScreen()));
+          },
+          ),
         ],
       ),
       backgroundColor: Colors.grey.shade900,
@@ -32,6 +51,28 @@ class MyHome extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: HomePage(),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        // type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.grey.shade900,
+        currentIndex: currentIndex,
+        onTap: (index) => setState(() =>currentIndex = index),
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+            backgroundColor: Colors.red, // not working
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+            backgroundColor: Colors.green, // not working
+          ),
+        ],
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.grey,
+        showUnselectedLabels: false,
+
       ),
     );
   }
@@ -50,7 +91,7 @@ class _HomePageState extends State<HomePage> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         const Expanded(
-          flex: 3,
+          flex: 2,
           child: Padding(
             padding: EdgeInsets.all(10.0),
             child: Center(
