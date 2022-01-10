@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:se380_project/screens/secon_page_main.dart';
 
 class AuthenticationForm extends StatefulWidget {
   AuthenticationForm(this.submitFn);
@@ -94,7 +95,11 @@ class _AuthenticationFormState extends State<AuthenticationForm> {
                 SizedBox(height: 15),
                 RaisedButton(
                   child: Text(_isLogin ? "Login" : "Sign Up"),
-                  onPressed: _trySubmit,
+                  onPressed: () {
+                    /////////
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => DietApp()));
+                  },
                 ),
                 FlatButton(
                   textColor: Theme.of(context).primaryColor,

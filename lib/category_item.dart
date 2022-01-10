@@ -4,7 +4,7 @@ class CategoryItem extends StatelessWidget {
   late String title;
   late Color color;
 
-  CategoryItem(String title, Color color);
+  CategoryItem(this.title, this.color);
   @override
   Widget build(BuildContext context) {
     return Container(

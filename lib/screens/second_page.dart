@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:se380_project/mealpage.dart';
+import 'package:se380_project/screens/secon_page_main.dart';
+
+import '../categories.dart';
 
 class SecondPage extends StatelessWidget {
   const SecondPage({Key? key}) : super(key: key);
@@ -26,8 +30,9 @@ class HomePage2 extends StatelessWidget {
               },
               icon: Icon(Icons.clear)),
           IconButton(
+              //second page to meals page
               onPressed: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (_) => SearchPage())),
+                  .push(MaterialPageRoute(builder: (_) => MealsPage())),
               icon: Icon(Icons.search)),
         ],
       ),
@@ -57,7 +62,12 @@ class SearchPage extends StatelessWidget {
                     prefixIcon: Icon(Icons.search),
                     suffixIcon: IconButton(
                       icon: Icon(Icons.clear),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CategoriesScreen()));
+                      },
                     ),
                     hintText: 'Search Meal...',
                     border: InputBorder.none),
