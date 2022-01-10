@@ -21,7 +21,7 @@ const CATEGORIES = const [
   Category(
     id: 'c4',
     title: 'Dessert',
-    color: Colors.red,
+    color: Colors.green,
   ),
 ];
 
@@ -35,8 +35,9 @@ const MEALS = const [
     affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
     imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+        'https://cdn.pixabay.com/photo/2019/11/14/11/23/pasta-4625962_960_720.jpg',
     duration: 20,
+    calorie: 500,
     ingredients: [
       '4 Tomatoes',
       '1 Tablespoon of Olive Oil',
@@ -64,22 +65,22 @@ const MEALS = const [
     categories: [
       'c1',
     ],
-    title: 'Pineapple Toast',
+    title: 'Toast',
     affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
     imageUrl:
-        'https://cdn.pixabay.com/photo/2018/07/11/21/51/toast-3532016_1280.jpg',
+        'https://cdn.pixabay.com/photo/2016/11/29/04/00/bread-1867208_960_720.jpg',
     duration: 10,
+    calorie: 350,
     ingredients: [
       '1 Slice White Bread',
       '1 Slice Ham',
-      '1 Slice Pineapple',
       '1-2 Slices of Cheese',
       'Butter'
     ],
     steps: [
       'Butter one side of the white bread',
-      'Layer ham, the pineapple and cheese on the white bread',
+      'Layer ham, cheese on the white bread',
       'Bake the toast for round about 10 minutes in the oven at 200°C'
     ],
     isGlutenFree: false,
@@ -90,15 +91,15 @@ const MEALS = const [
   Meal(
     id: 'm3',
     categories: [
-      'c2',
       'c3',
     ],
-    title: 'Classic Hamburger',
+    title: 'Hamburger',
     affordability: Affordability.Pricey,
     complexity: Complexity.Simple,
     imageUrl:
-        'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg',
+        'https://cdn.pixabay.com/photo/2019/04/24/12/11/burger-4152013_960_720.jpg',
     duration: 45,
+    calorie: 580,
     ingredients: [
       '300g Cattle Hack',
       '1 Tomato',
@@ -125,12 +126,13 @@ const MEALS = const [
       'c2',
       'c3',
     ],
-    title: 'Wiener Schnitzel',
+    title: 'Schnitzel',
     affordability: Affordability.Luxurious,
     complexity: Complexity.Challenging,
     imageUrl:
-        'https://cdn.pixabay.com/photo/2018/03/31/19/29/schnitzel-3279045_1280.jpg',
+        'https://cdn.pixabay.com/photo/2018/03/31/19/29/schnitzel-3279045_960_720.jpg',
     duration: 60,
+    calorie: 430,
     ingredients: [
       '8 Veal Cutlets',
       '4 Eggs',
@@ -167,6 +169,7 @@ const MEALS = const [
     imageUrl:
         'https://cdn.pixabay.com/photo/2016/10/25/13/29/smoked-salmon-salad-1768890_1280.jpg',
     duration: 15,
+    calorie: 310,
     ingredients: [
       'Arugula',
       'Lamb\'s Lettuce',
@@ -195,12 +198,13 @@ const MEALS = const [
     categories: [
       'c4',
     ],
-    title: 'Orange Mousse',
+    title: 'Salted Caramel Peanut Butter Fudge Pie',
     affordability: Affordability.Affordable,
     complexity: Complexity.Hard,
     imageUrl:
-        'https://cdn.pixabay.com/photo/2017/05/01/05/18/pastry-2274750_1280.jpg',
-    duration: 240,
+        'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/salted-caramel-peanut-pie-1571253873.jpg?crop=0.751xw:0.846xh;0.249xw,0.154xh&resize=980:*',
+    duration: 100,
+    calorie: 275,
     ingredients: [
       '4 Sheets of Gelatine',
       '150ml Orange Juice',
@@ -234,8 +238,9 @@ const MEALS = const [
     affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
     imageUrl:
-        'https://cdn.pixabay.com/photo/2018/07/10/21/23/pancake-3529653_1280.jpg',
+        'https://cdn.pixabay.com/photo/2017/01/16/17/45/pancake-1984716_960_720.jpg',
     duration: 20,
+    calorie: 460,
     ingredients: [
       '1 1/2 Cups all-purpose Flour',
       '3 1/2 Teaspoons Baking Powder',
@@ -261,12 +266,13 @@ const MEALS = const [
     categories: [
       'c3',
     ],
-    title: 'Creamy Indian Chicken Curry',
+    title: 'Veggie-and-Bean Burritos',
     affordability: Affordability.Pricey,
     complexity: Complexity.Challenging,
     imageUrl:
-        'https://cdn.pixabay.com/photo/2018/06/18/16/05/indian-food-3482749_1280.jpg',
+        'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dinner-ideas-dinner-recipes-veggie-burrito-1628179214.jpg?crop=1xw:1xh;center,top&resize=980:*',
     duration: 35,
+    calorie: 390,
     ingredients: [
       '4 Chicken Breasts',
       '1 Onion',
@@ -300,6 +306,7 @@ const MEALS = const [
     imageUrl:
         'https://cdn.pixabay.com/photo/2014/08/07/21/07/souffle-412785_1280.jpg',
     duration: 45,
+    calorie: 530,
     ingredients: [
       '1 Teaspoon melted Butter',
       '2 Tablespoons white Sugar',
@@ -342,13 +349,321 @@ const MEALS = const [
     id: 'm10',
     categories: [
       'c2',
+      'c3',
     ],
-    title: 'Asparagus Salad with Cherry Tomatoes',
+    title: 'Sezar Salad',
     affordability: Affordability.Luxurious,
     complexity: Complexity.Simple,
     imageUrl:
-        'https://cdn.pixabay.com/photo/2018/04/09/18/26/asparagus-3304997_1280.jpg',
+        'https://cdn.pixabay.com/photo/2014/01/17/08/56/caesar-246818_960_720.jpg',
     duration: 30,
+    calorie: 500,
+    ingredients: [
+      'White and Green Asparagus',
+      '30g Pine Nuts',
+      '300g Cherry Tomatoes',
+      'Salad',
+      'Salt, Pepper and Olive Oil'
+    ],
+    steps: [
+      'Wash, peel and cut the asparagus',
+      'Cook in salted water',
+      'Salt and pepper the asparagus',
+      'Roast the pine nuts',
+      'Halve the tomatoes',
+      'Mix with asparagus, salad and dressing',
+      'Serve with Baguette'
+    ],
+    isGlutenFree: true,
+    isVegan: true,
+    isVegetarian: true,
+    isLactoseFree: true,
+  ),
+
+  ///////////BURDAN SONRASI AYNI TARİF, isim farklı!
+  Meal(
+    id: 'm11',
+    categories: [
+      'c3',
+    ],
+    title: 'Ground Turkey Sloppy Joes',
+    affordability: Affordability.Luxurious,
+    complexity: Complexity.Simple,
+    imageUrl:
+        'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dinner-ideas-dinner-recipes-ground-turkey-sloppy-joes-1628180767.jpg?crop=1xw:0.998003992015968xh;center,top&resize=980:*',
+    duration: 30,
+    calorie: 500,
+    ingredients: [
+      'White and Green Asparagus',
+      '30g Pine Nuts',
+      '300g Cherry Tomatoes',
+      'Salad',
+      'Salt, Pepper and Olive Oil'
+    ],
+    steps: [
+      'Wash, peel and cut the asparagus',
+      'Cook in salted water',
+      'Salt and pepper the asparagus',
+      'Roast the pine nuts',
+      'Halve the tomatoes',
+      'Mix with asparagus, salad and dressing',
+      'Serve with Baguette'
+    ],
+    isGlutenFree: true,
+    isVegan: true,
+    isVegetarian: true,
+    isLactoseFree: true,
+  ),
+
+  Meal(
+    id: 'm12',
+    categories: [
+      'c3',
+    ],
+    title: 'Strip Steak With Lemon Mashed Potatoes',
+    affordability: Affordability.Luxurious,
+    complexity: Complexity.Simple,
+    imageUrl:
+        'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dinner-ideas-dinner-recipes-strip-steak-mashed-potatoes-1628182599.jpg?crop=1xw:1xh;center,top&resize=980:*',
+    duration: 30,
+    calorie: 500,
+    ingredients: [
+      'White and Green Asparagus',
+      '30g Pine Nuts',
+      '300g Cherry Tomatoes',
+      'Salad',
+      'Salt, Pepper and Olive Oil'
+    ],
+    steps: [
+      'Wash, peel and cut the asparagus',
+      'Cook in salted water',
+      'Salt and pepper the asparagus',
+      'Roast the pine nuts',
+      'Halve the tomatoes',
+      'Mix with asparagus, salad and dressing',
+      'Serve with Baguette'
+    ],
+    isGlutenFree: true,
+    isVegan: true,
+    isVegetarian: true,
+    isLactoseFree: true,
+  ),
+  Meal(
+    id: 'm13',
+    categories: [
+      'c1',
+    ],
+    title: 'Breakfast Strata',
+    affordability: Affordability.Luxurious,
+    complexity: Complexity.Simple,
+    imageUrl:
+        'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/breakfast-strata-vertical-1535657907.jpg?crop=1xw:1xh;center,top&resize=980:*',
+    duration: 30,
+    calorie: 500,
+    ingredients: [
+      'White and Green Asparagus',
+      '30g Pine Nuts',
+      '300g Cherry Tomatoes',
+      'Salad',
+      'Salt, Pepper and Olive Oil'
+    ],
+    steps: [
+      'Wash, peel and cut the asparagus',
+      'Cook in salted water',
+      'Salt and pepper the asparagus',
+      'Roast the pine nuts',
+      'Halve the tomatoes',
+      'Mix with asparagus, salad and dressing',
+      'Serve with Baguette'
+    ],
+    isGlutenFree: true,
+    isVegan: true,
+    isVegetarian: true,
+    isLactoseFree: true,
+  ),
+
+  Meal(
+    id: 'm14',
+    categories: [
+      'c1',
+    ],
+    title: 'Eggs Benedict',
+    affordability: Affordability.Luxurious,
+    complexity: Complexity.Simple,
+    imageUrl:
+        'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/eggs-benedict-pin-1553030818.jpg?crop=1xw:0.9453781512605042xh;center,top&resize=980:*',
+    duration: 15,
+    calorie: 500,
+    ingredients: [
+      'White and Green Asparagus',
+      '30g Pine Nuts',
+      '300g Cherry Tomatoes',
+      'Salad',
+      'Salt, Pepper and Olive Oil'
+    ],
+    steps: [
+      'Wash, peel and cut the asparagus',
+      'Cook in salted water',
+      'Salt and pepper the asparagus',
+      'Roast the pine nuts',
+      'Halve the tomatoes',
+      'Mix with asparagus, salad and dressing',
+      'Serve with Baguette'
+    ],
+    isGlutenFree: true,
+    isVegan: true,
+    isVegetarian: true,
+    isLactoseFree: true,
+  ),
+
+  Meal(
+    id: 'm15',
+    categories: [
+      'c1',
+    ],
+    title: 'Bagel Breakfast Sliders',
+    affordability: Affordability.Luxurious,
+    complexity: Complexity.Simple,
+    imageUrl:
+        'https://hips.hearstapps.com/del.h-cdn.co/assets/18/01/480x718/gallery-1514937309-delish-bagel-breakfast-sliders-pinterest-still003.jpg?resize=980:*',
+    duration: 50,
+    calorie: 500,
+    ingredients: [
+      'White and Green Asparagus',
+      '30g Pine Nuts',
+      '300g Cherry Tomatoes',
+      'Salad',
+      'Salt, Pepper and Olive Oil'
+    ],
+    steps: [
+      'Wash, peel and cut the asparagus',
+      'Cook in salted water',
+      'Salt and pepper the asparagus',
+      'Roast the pine nuts',
+      'Halve the tomatoes',
+      'Mix with asparagus, salad and dressing',
+      'Serve with Baguette'
+    ],
+    isGlutenFree: true,
+    isVegan: true,
+    isVegetarian: true,
+    isLactoseFree: true,
+  ),
+
+  Meal(
+    id: 'm16',
+    categories: [
+      'c4',
+    ],
+    title: 'Maple-Nut Pie',
+    affordability: Affordability.Luxurious,
+    complexity: Complexity.Simple,
+    imageUrl:
+        'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/maple-pie-1571253340.jpg?crop=1xw:1xh;center,top&resize=980:*',
+    duration: 70,
+    calorie: 500,
+    ingredients: [
+      'White and Green Asparagus',
+      '30g Pine Nuts',
+      '300g Cherry Tomatoes',
+      'Salad',
+      'Salt, Pepper and Olive Oil'
+    ],
+    steps: [
+      'Wash, peel and cut the asparagus',
+      'Cook in salted water',
+      'Salt and pepper the asparagus',
+      'Roast the pine nuts',
+      'Halve the tomatoes',
+      'Mix with asparagus, salad and dressing',
+      'Serve with Baguette'
+    ],
+    isGlutenFree: true,
+    isVegan: true,
+    isVegetarian: true,
+    isLactoseFree: true,
+  ),
+
+  Meal(
+    id: 'm17',
+    categories: [
+      'c4',
+    ],
+    title: 'Fudgy Stout Brownies',
+    affordability: Affordability.Luxurious,
+    complexity: Complexity.Simple,
+    imageUrl:
+        'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/super-bowl-desserts-fudgy-stout-brownies-1639148336.jpg?crop=1.00xw:0.835xh;0,0.0398xh&resize=980:*',
+    duration: 60,
+    calorie: 500,
+    ingredients: [
+      'White and Green Asparagus',
+      '30g Pine Nuts',
+      '300g Cherry Tomatoes',
+      'Salad',
+      'Salt, Pepper and Olive Oil'
+    ],
+    steps: [
+      'Wash, peel and cut the asparagus',
+      'Cook in salted water',
+      'Salt and pepper the asparagus',
+      'Roast the pine nuts',
+      'Halve the tomatoes',
+      'Mix with asparagus, salad and dressing',
+      'Serve with Baguette'
+    ],
+    isGlutenFree: true,
+    isVegan: true,
+    isVegetarian: true,
+    isLactoseFree: true,
+  ),
+
+  Meal(
+    id: 'm18',
+    categories: [
+      'c2',
+    ],
+    title: 'Keto Tortilla Chips',
+    affordability: Affordability.Luxurious,
+    complexity: Complexity.Simple,
+    imageUrl:
+        'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/20191219-seo-keto-tortilla-chips-delish-ehg-8872-1578952035.jpg?crop=0.935xw:1.00xh;0.0521xw,0&resize=980:*',
+    duration: 40,
+    calorie: 500,
+    ingredients: [
+      'White and Green Asparagus',
+      '30g Pine Nuts',
+      '300g Cherry Tomatoes',
+      'Salad',
+      'Salt, Pepper and Olive Oil'
+    ],
+    steps: [
+      'Wash, peel and cut the asparagus',
+      'Cook in salted water',
+      'Salt and pepper the asparagus',
+      'Roast the pine nuts',
+      'Halve the tomatoes',
+      'Mix with asparagus, salad and dressing',
+      'Serve with Baguette'
+    ],
+    isGlutenFree: true,
+    isVegan: true,
+    isVegetarian: true,
+    isLactoseFree: true,
+  ),
+
+  Meal(
+    id: 'm19',
+    categories: [
+      'c2',
+    ],
+    title: 'Fried Potatoes',
+    affordability: Affordability.Luxurious,
+    complexity: Complexity.Simple,
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2016/11/20/09/06/bowl-1842294_960_720.jpg',
+    duration: 20,
+    calorie: 500,
     ingredients: [
       'White and Green Asparagus',
       '30g Pine Nuts',
