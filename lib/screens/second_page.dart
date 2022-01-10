@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:se380_project/mealpage.dart';
 import 'package:se380_project/screens/secon_page_main.dart';
 
-import '../categories.dart';
+import 'categories.dart';
 
 class SecondPage extends StatelessWidget {
   const SecondPage({Key? key}) : super(key: key);
