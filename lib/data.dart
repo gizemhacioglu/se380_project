@@ -5,7 +5,7 @@ const CATEGORIES = const [
   Category(
     id: 'c1',
     title: 'Breakfast',
-    color: Colors.purple,
+    color: Colors.blue,
   ),
   Category(
     id: 'c2',
