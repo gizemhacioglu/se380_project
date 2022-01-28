@@ -37,7 +37,7 @@ const MEALS = const [
     imageUrl:
         'https://cdn.pixabay.com/photo/2019/11/14/11/23/pasta-4625962_960_720.jpg',
     duration: 20,
-    calorie: 500,
+    calorie: "500",
     ingredients: [
       '4 Tomatoes',
       '1 Tablespoon of Olive Oil',
@@ -71,7 +71,7 @@ const MEALS = const [
     imageUrl:
         'https://cdn.pixabay.com/photo/2016/11/29/04/00/bread-1867208_960_720.jpg',
     duration: 10,
-    calorie: 350,
+    calorie: "350",
     ingredients: [
       '1 Slice White Bread',
       '1 Slice Ham',
@@ -99,7 +99,7 @@ const MEALS = const [
     imageUrl:
         'https://cdn.pixabay.com/photo/2019/04/24/12/11/burger-4152013_960_720.jpg',
     duration: 45,
-    calorie: 580,
+    calorie: "580",
     ingredients: [
       '300g Cattle Hack',
       '1 Tomato',
@@ -132,7 +132,7 @@ const MEALS = const [
     imageUrl:
         'https://cdn.pixabay.com/photo/2018/03/31/19/29/schnitzel-3279045_960_720.jpg',
     duration: 60,
-    calorie: 430,
+    calorie: "430",
     ingredients: [
       '8 Veal Cutlets',
       '4 Eggs',
@@ -169,7 +169,7 @@ const MEALS = const [
     imageUrl:
         'https://cdn.pixabay.com/photo/2016/10/25/13/29/smoked-salmon-salad-1768890_1280.jpg',
     duration: 15,
-    calorie: 310,
+    calorie: "310",
     ingredients: [
       'Arugula',
       'Lamb\'s Lettuce',
@@ -204,7 +204,7 @@ const MEALS = const [
     imageUrl:
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/salted-caramel-peanut-pie-1571253873.jpg?crop=0.751xw:0.846xh;0.249xw,0.154xh&resize=980:*',
     duration: 100,
-    calorie: 275,
+    calorie: "275",
     ingredients: [
       '4 Sheets of Gelatine',
       '150ml Orange Juice',
@@ -240,7 +240,7 @@ const MEALS = const [
     imageUrl:
         'https://cdn.pixabay.com/photo/2017/01/16/17/45/pancake-1984716_960_720.jpg',
     duration: 20,
-    calorie: 460,
+    calorie: "460",
     ingredients: [
       '1 1/2 Cups all-purpose Flour',
       '3 1/2 Teaspoons Baking Powder',
@@ -272,7 +272,7 @@ const MEALS = const [
     imageUrl:
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dinner-ideas-dinner-recipes-veggie-burrito-1628179214.jpg?crop=1xw:1xh;center,top&resize=980:*',
     duration: 35,
-    calorie: 390,
+    calorie: "390",
     ingredients: [
       '4 Chicken Breasts',
       '1 Onion',
@@ -306,7 +306,7 @@ const MEALS = const [
     imageUrl:
         'https://cdn.pixabay.com/photo/2014/08/07/21/07/souffle-412785_1280.jpg',
     duration: 45,
-    calorie: 530,
+    calorie: "530",
     ingredients: [
       '1 Teaspoon melted Butter',
       '2 Tablespoons white Sugar',
@@ -357,7 +357,7 @@ const MEALS = const [
     imageUrl:
         'https://cdn.pixabay.com/photo/2014/01/17/08/56/caesar-246818_960_720.jpg',
     duration: 30,
-    calorie: 500,
+    calorie: "500",
     ingredients: [
       'White and Green Asparagus',
       '30g Pine Nuts',
@@ -392,7 +392,7 @@ const MEALS = const [
     imageUrl:
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dinner-ideas-dinner-recipes-ground-turkey-sloppy-joes-1628180767.jpg?crop=1xw:0.998003992015968xh;center,top&resize=980:*',
     duration: 30,
-    calorie: 500,
+    calorie: "500",
     ingredients: [
       'White and Green Asparagus',
       '30g Pine Nuts',
@@ -426,7 +426,7 @@ const MEALS = const [
     imageUrl:
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dinner-ideas-dinner-recipes-strip-steak-mashed-potatoes-1628182599.jpg?crop=1xw:1xh;center,top&resize=980:*',
     duration: 30,
-    calorie: 500,
+    calorie: "500",
     ingredients: [
       'White and Green Asparagus',
       '30g Pine Nuts',
@@ -459,7 +459,7 @@ const MEALS = const [
     imageUrl:
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/breakfast-strata-vertical-1535657907.jpg?crop=1xw:1xh;center,top&resize=980:*',
     duration: 30,
-    calorie: 500,
+    calorie: "500",
     ingredients: [
       'White and Green Asparagus',
       '30g Pine Nuts',
@@ -493,7 +493,7 @@ const MEALS = const [
     imageUrl:
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/eggs-benedict-pin-1553030818.jpg?crop=1xw:0.9453781512605042xh;center,top&resize=980:*',
     duration: 15,
-    calorie: 500,
+    calorie: "500",
     ingredients: [
       'White and Green Asparagus',
       '30g Pine Nuts',
@@ -527,7 +527,7 @@ const MEALS = const [
     imageUrl:
         'https://hips.hearstapps.com/del.h-cdn.co/assets/18/01/480x718/gallery-1514937309-delish-bagel-breakfast-sliders-pinterest-still003.jpg?resize=980:*',
     duration: 50,
-    calorie: 500,
+    calorie: "500",
     ingredients: [
       'White and Green Asparagus',
       '30g Pine Nuts',
@@ -556,12 +556,12 @@ const MEALS = const [
       'c4',
     ],
     title: 'Maple-Nut Pie',
-    affordability: Affordability.Luxurious,
+    affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
     imageUrl:
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/maple-pie-1571253340.jpg?crop=1xw:1xh;center,top&resize=980:*',
     duration: 70,
-    calorie: 500,
+    calorie: "500",
     ingredients: [
       'White and Green Asparagus',
       '30g Pine Nuts',
@@ -590,12 +590,12 @@ const MEALS = const [
       'c4',
     ],
     title: 'Fudgy Stout Brownies',
-    affordability: Affordability.Luxurious,
+    affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
     imageUrl:
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/super-bowl-desserts-fudgy-stout-brownies-1639148336.jpg?crop=1.00xw:0.835xh;0,0.0398xh&resize=980:*',
     duration: 60,
-    calorie: 500,
+    calorie: "500",
     ingredients: [
       'White and Green Asparagus',
       '30g Pine Nuts',
@@ -624,12 +624,12 @@ const MEALS = const [
       'c2',
     ],
     title: 'Keto Tortilla Chips',
-    affordability: Affordability.Luxurious,
+    affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
     imageUrl:
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/20191219-seo-keto-tortilla-chips-delish-ehg-8872-1578952035.jpg?crop=0.935xw:1.00xh;0.0521xw,0&resize=980:*',
     duration: 40,
-    calorie: 500,
+    calorie: "500",
     ingredients: [
       'White and Green Asparagus',
       '30g Pine Nuts',
@@ -658,12 +658,12 @@ const MEALS = const [
       'c2',
     ],
     title: 'Fried Potatoes',
-    affordability: Affordability.Luxurious,
+    affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
     imageUrl:
         'https://cdn.pixabay.com/photo/2016/11/20/09/06/bowl-1842294_960_720.jpg',
     duration: 20,
-    calorie: 500,
+    calorie: "500",
     ingredients: [
       'White and Green Asparagus',
       '30g Pine Nuts',

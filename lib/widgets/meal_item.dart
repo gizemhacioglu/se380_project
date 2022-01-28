@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:se380_project/models/meal.dart';
+import 'package:se380_project/screens/meal_detail_screen.dart';
+import 'package:se380_project/screens/second_page.dart';
 
 class MealItem extends StatelessWidget {
+  final String id;
   final String title;
   final String imageUrl;
   final int duration;
@@ -9,6 +12,7 @@ class MealItem extends StatelessWidget {
   final Affordability affordability;
 
   MealItem({
+    required this.id,
     required this.title,
     required this.imageUrl,
     required this.affordability,
@@ -48,11 +52,17 @@ class MealItem extends StatelessWidget {
     }
   }
 
-  void selectMeal() {}
+  void selectMeal(BuildContext context) {
+    Navigator.of(context).pushNamed(
+      MealDetailScreen.routeName,
+      arguments: id,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: selectMeal,
+      onTap: () => selectMeal(context),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
@@ -134,6 +144,26 @@ class MealItem extends StatelessWidget {
                         width: 6,
                       ),
                       Text(affordabilityText),
+                      SizedBox(width: 10),
+                      Container(
+                        width: 50,
+                        child: TextButton(
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(Colors.grey),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SecondPage()));
+                          },
+                          child: Text(
+                            '+',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ],

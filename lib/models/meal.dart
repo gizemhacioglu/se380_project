@@ -19,7 +19,7 @@ class Meal {
   final List<String> ingredients;
   final List<String> steps;
   final int duration;
-  final int calorie;
+  final String calorie;
   final Complexity complexity;
   final Affordability affordability;
   final bool isGlutenFree;

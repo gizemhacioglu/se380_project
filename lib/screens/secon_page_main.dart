@@ -18,7 +18,7 @@ class MyHome extends StatefulWidget {
 
 class _MyHomeState extends State<MyHome> {
   int currentIndex = 0;
-  final screens =[
+  final screens = [
     DietApp(),
     ProfileScreen(),
   ];
@@ -33,15 +33,15 @@ class _MyHomeState extends State<MyHome> {
             icon: Icon(Icons.arrow_forward_outlined),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const SecondPage()));
+                  MaterialPageRoute(builder: (context) => SecondPage()));
             },
           ),
           IconButton(
-          icon: Icon(Icons.person),
-          onPressed: () {
-          Navigator.push(context,
-          MaterialPageRoute(builder: (context) => ProfileScreen()));
-          },
+            icon: Icon(Icons.person),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ProfileScreen()));
+            },
           ),
         ],
       ),
@@ -56,7 +56,7 @@ class _MyHomeState extends State<MyHome> {
         // type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.grey.shade900,
         currentIndex: currentIndex,
-        onTap: (index) => setState(() =>currentIndex = index),
+        onTap: (index) => setState(() => currentIndex = index),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -72,7 +72,6 @@ class _MyHomeState extends State<MyHome> {
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey,
         showUnselectedLabels: false,
-
       ),
     );
   }
@@ -129,10 +128,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const SecondPage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => SecondPage()));
                   },
                   child: const Text(
                     'Breakfast',
@@ -162,10 +159,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const SecondPage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => SecondPage()));
                   },
                   child: const Text(
                     'Lunch',
@@ -195,10 +190,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const SecondPage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => SecondPage()));
                   },
                   child: const Text(
                     'Dinner',
