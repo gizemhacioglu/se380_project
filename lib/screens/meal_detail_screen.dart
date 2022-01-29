@@ -9,7 +9,8 @@ class MealDetailScreen extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 10),
       child: Text(
         text,
-        style: Theme.of(context).textTheme.headline6,
+        style: TextStyle(fontSize: 20.0, color: Colors.white),
+
       ),
     );
   }
@@ -52,7 +53,7 @@ class MealDetailScreen extends StatelessWidget {
             buildContainer(
               ListView.builder(
                 itemBuilder: (ctx, index) => Card(
-                  color: Theme.of(context).accentColor,
+                  color: Colors.white,
                   child: Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 5,

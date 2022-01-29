@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:se380_project/mealpage.dart';
 import 'package:se380_project/profile/profile_screen.dart';
 import './second_page.dart';
+import 'package:se380_project/screens/categories.dart';
+
 
 void main() => runApp(DietApp());
 
@@ -27,13 +30,13 @@ class _MyHomeState extends State<MyHome> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple,
-        title: const Text('Diet App'),
+        title: const Text('CookBook App'),
         actions: [
           IconButton(
             icon: Icon(Icons.arrow_forward_outlined),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SecondPage()));
+                  MaterialPageRoute(builder: (context) => MealsPage()));
             },
           ),
           IconButton(
@@ -61,12 +64,10 @@ class _MyHomeState extends State<MyHome> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            backgroundColor: Colors.red, // not working
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',
-            backgroundColor: Colors.green, // not working
           ),
         ],
         selectedItemColor: Colors.white,
@@ -95,9 +96,12 @@ class _HomePageState extends State<HomePage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                'Home Page.',
+                'Welcome to CookBook App!'
+                    'Press one of the buttons to start.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
+                  fontFamily: 'Raleway',
+                  fontWeight: FontWeight.w600,
                   fontSize: 25.0,
                   color: Colors.white,
                 ),
@@ -113,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                     foregroundColor:
                         MaterialStateProperty.all<Color>(Colors.blue),
                     backgroundColor:
-                        MaterialStateProperty.all<Color>(Colors.blueGrey),
+                        MaterialStateProperty.all<Color>(Colors.purple.shade300),
                     overlayColor: MaterialStateProperty.resolveWith<Color?>(
                       (Set<MaterialState> states) {
                         if (states.contains(MaterialState.hovered)) {
@@ -129,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SecondPage()));
+                        MaterialPageRoute(builder: (context) => MealsPage()));
                   },
                   child: const Text(
                     'Breakfast',
@@ -144,7 +148,7 @@ class _HomePageState extends State<HomePage> {
                     foregroundColor:
                         MaterialStateProperty.all<Color>(Colors.blue),
                     backgroundColor:
-                        MaterialStateProperty.all<Color>(Colors.blueGrey),
+                        MaterialStateProperty.all<Color>(Colors.purple.shade300),
                     overlayColor: MaterialStateProperty.resolveWith<Color?>(
                       (Set<MaterialState> states) {
                         if (states.contains(MaterialState.hovered)) {
@@ -160,7 +164,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SecondPage()));
+                        MaterialPageRoute(builder: (context) => MealsPage()));
                   },
                   child: const Text(
                     'Lunch',
@@ -175,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                     foregroundColor:
                         MaterialStateProperty.all<Color>(Colors.blue),
                     backgroundColor:
-                        MaterialStateProperty.all<Color>(Colors.blueGrey),
+                        MaterialStateProperty.all<Color>(Colors.purple.shade300),
                     overlayColor: MaterialStateProperty.resolveWith<Color?>(
                       (Set<MaterialState> states) {
                         if (states.contains(MaterialState.hovered)) {
@@ -191,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SecondPage()));
+                        MaterialPageRoute(builder: (context) => MealsPage()));
                   },
                   child: const Text(
                     'Dinner',

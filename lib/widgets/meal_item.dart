@@ -3,6 +3,9 @@ import 'package:se380_project/models/meal.dart';
 import 'package:se380_project/screens/meal_detail_screen.dart';
 import 'package:se380_project/screens/second_page.dart';
 
+
+import '../data.dart';
+
 class MealItem extends StatelessWidget {
   final String id;
   final String title;

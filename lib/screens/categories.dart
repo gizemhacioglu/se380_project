@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:se380_project/screens/second_page.dart';
+import 'package:se380_project/screens/secon_page_main.dart';
 
 import '../data.dart';
 import '../widgets/category_item.dart';
@@ -14,7 +15,7 @@ class CategoriesScreen extends StatelessWidget {
           IconButton(
               //second page to meals page
               onPressed: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (_) => SecondPage())),
+                  .push(MaterialPageRoute(builder: (_) => DietApp())),
               icon: Icon(Icons.clear)),
         ],
       ),
