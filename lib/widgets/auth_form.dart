@@ -3,7 +3,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:se380_project/screens/secon_page_main.dart';
 
 class AuthenticationForm extends StatefulWidget {
-  AuthenticationForm(this.submitFn);
+  AuthenticationForm(this.submitFn, this.isLoading);
+
+  final bool isLoading;
 
   final void Function(String email, String username, String password,
       bool isLogin, BuildContext ctx) submitFn;
@@ -33,6 +35,11 @@ class _AuthenticationFormState extends State<AuthenticationForm> {
         context,
       );
     }
+  }
+
+  submit() {
+    _trySubmit();
+    Navigator.push(context, MaterialPageRoute(builder: (context) => DietApp()));
   }
 
   @override
@@ -93,25 +100,24 @@ class _AuthenticationFormState extends State<AuthenticationForm> {
                       _userPassword = value!;
                     }),
                 SizedBox(height: 15),
-                RaisedButton(
-                  child: Text(_isLogin ? "Login" : "Sign Up"),
-                  onPressed: () {
-                    /////////
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => DietApp()));
-                  },
-                ),
-                FlatButton(
-                  textColor: Theme.of(context).primaryColor,
-                  child: Text(_isLogin
-                      ? "Create new account"
-                      : "I already have an account"),
-                  onPressed: () {
-                    setState(() {
-                      _isLogin = !_isLogin;
-                    });
-                  },
-                ),
+                if (widget.isLoading) CircularProgressIndicator(),
+                if (!widget.isLoading)
+                  RaisedButton(
+                    child: Text(_isLogin ? "Login" : "Sign Up"),
+                    onPressed: submit,
+                  ),
+                if (!widget.isLoading)
+                  FlatButton(
+                    textColor: Theme.of(context).primaryColor,
+                    child: Text(_isLogin
+                        ? "Create new account"
+                        : "I already have an account"),
+                    onPressed: () {
+                      setState(() {
+                        _isLogin = !_isLogin;
+                      });
+                    },
+                  ),
               ],
             ),
           ),

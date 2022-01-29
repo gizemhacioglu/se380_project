@@ -10,6 +10,7 @@ class MealItem extends StatelessWidget {
   final String id;
   final String title;
   final String imageUrl;
+  final String calorie;
   final int duration;
   final Complexity complexity;
   final Affordability affordability;
@@ -21,6 +22,7 @@ class MealItem extends StatelessWidget {
     required this.affordability,
     required this.complexity,
     required this.duration,
+    required this.calorie,
   });
 
   String get complexityText {
@@ -141,6 +143,18 @@ class MealItem extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       Icon(
+                        Icons.flatware,
+                      ),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Text('$calorie kcal'),
+                      SizedBox(width: 10),
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Icon(
                         Icons.attach_money,
                       ),
                       SizedBox(
@@ -148,25 +162,6 @@ class MealItem extends StatelessWidget {
                       ),
                       Text(affordabilityText),
                       SizedBox(width: 10),
-                      Container(
-                        width: 50,
-                        child: TextButton(
-                          style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all<Color>(Colors.grey),
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => SecondPage()));
-                          },
-                          child: Text(
-                            '+',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
-                          ),
-                        ),
-                      ),
                     ],
                   ),
                 ],
