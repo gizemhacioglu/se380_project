@@ -11,6 +11,7 @@ class AuthenticationScreen extends StatefulWidget {
 }
 
 class _AuthenticationScreenState extends State<AuthenticationScreen> {
+  var _isLoading = false;
   final _authentication = FirebaseAuth.instance;
   void _submitAuthenticationForm(
     String email,
@@ -22,6 +23,9 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
     UserCredential authResult;
 
     try {
+      setState(() {
+        var _isLoading = true;
+      });
       if (isLogin) {
         authResult = await _authentication.signInWithEmailAndPassword(
             email: email, password: password) as UserCredential;
@@ -39,6 +43,9 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
         content: Text(message),
         backgroundColor: Theme.of(ctx).errorColor,
       ));
+      setState(() {
+        var _isLoading = false;
+      });
     } catch (error) {
       print(error);
     }
@@ -50,6 +57,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
       backgroundColor: Theme.of(context).primaryColor,
       body: AuthenticationForm(
         _submitAuthenticationForm,
+        _isLoading,
       ),
     );
   }

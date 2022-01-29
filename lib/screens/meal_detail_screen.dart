@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:se380_project/data.dart';
+import 'package:se380_project/models/meal.dart';
+import 'package:se380_project/screens/deneme.dart';
+import 'package:se380_project/screens/second_page.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-class MealDetailScreen extends StatelessWidget {
+class MealDetailScreen extends StatefulWidget {
   static const routeName = '/meal-detail';
 
+  @override
+  State<MealDetailScreen> createState() => _MealDetailScreenState();
+}
+
+class _MealDetailScreenState extends State<MealDetailScreen> {
   Widget buildSectionTitle(BuildContext context, String text) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
