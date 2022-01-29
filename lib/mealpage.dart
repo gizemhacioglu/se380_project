@@ -30,10 +30,8 @@ class MealsPage extends StatelessWidget {
               fontWeight: FontWeight.bold,
             )),
       ),
-      //home: CategoriesScreen(),
       initialRoute: '/',
       routes: {
-        //'/': (ctx) => TabsScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },

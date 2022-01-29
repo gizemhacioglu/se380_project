@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:se380_project/data.dart';
 import 'package:se380_project/models/meal.dart';
-import 'package:se380_project/screens/deneme.dart';
 import 'package:se380_project/screens/second_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -20,7 +19,6 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
       child: Text(
         text,
         style: TextStyle(fontSize: 20.0, color: Colors.white),
-
       ),
     );
   }

@@ -31,15 +31,6 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: AuthenticationScreen(),
-      /*StreamBuilder(
-              stream: FirebaseAuth.instance.authStateChanges(),
-              builder: (ctx, userSnapshot) {
-                if (userSnapshot.hasData ||
-                    FirebaseAuth.instance.currentUser != null) {
-                  return DietApp();
-                }
-                return AuthenticationScreen();
-              }),*/
     );
   }
 }
